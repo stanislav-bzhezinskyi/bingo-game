@@ -64,4 +64,10 @@ function speakText(text) {
   speechSynthesis.speak(utterance);
 }
 
+function setAppHeight() {
+  const app = document.getElementById('app');
+  app.style.height = `${window.innerHeight}px`;
+}
 
+setAppHeight();
+window.addEventListener('resize', setAppHeight);
