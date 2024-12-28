@@ -8,7 +8,12 @@ root.className = 'endGame';
 root.textContent = 'Lets Begin'
 
 button.addEventListener("click", () => {
+  button.disabled = true;
   root.className = 'root';
+
+  setTimeout(() => {
+    button.disabled = false;
+  }, 3000);
   randomNum();
   numberCreator();
 });
@@ -25,9 +30,11 @@ button.addEventListener('mouseup', () => {
 function numChecking(num) {
   if (numberArray.length === 0) {
     numberArray.push(num);
+    speakText(numberArray[numberArray.length - 1]);
   } else {
     if (!numberArray.includes(num)) {
       numberArray.push(num);
+      speakText(numberArray[numberArray.length - 1]);
     } else {
       
       numberCreator();
@@ -51,6 +58,10 @@ function numberCreator() {
   console.log(numberArray);
 }
 
-
+function speakText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "en-EN"; 
+  speechSynthesis.speak(utterance);
+}
 
 
