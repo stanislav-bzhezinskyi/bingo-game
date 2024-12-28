@@ -4,7 +4,7 @@ const app = document.querySelector('.body');
 
 
 let numberArray = [];
-let randomNum = () => Math.floor(Math.random() * 46) + 1;
+let randomNum = () => Math.floor(Math.random() * 48) + 1;
 
 root.className = 'endGame';
 root.textContent = 'Lets Begin';
