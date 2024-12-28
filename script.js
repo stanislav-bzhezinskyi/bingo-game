@@ -5,7 +5,7 @@ let numberArray = [];
 let randomNum = () => Math.floor(Math.random() * 46) + 1;
 
 root.className = 'endGame';
-root.textContent = 'lets begin'
+root.textContent = 'Lets Begin'
 
 button.addEventListener("click", () => {
   root.className = 'root';
