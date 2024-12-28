@@ -1,0 +1,55 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: fantasy;
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 5px solid #000;
+  border-radius: 1000%;
+}
+
+.endGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: fantasy;
+  width: 80px;
+  height: 80px;
+  font-size: 19px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 5px solid #000;
+  border-radius: 1000%;
+}
+
+.button {
+  font-family: fantasy;
+  font-size: 20px;
+  width: 150px;
+  height: 80px;
+  border-radius: 30px;
+  background-color: chartreuse;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.button.no-shadow {
+  box-shadow: none;
+}
+
