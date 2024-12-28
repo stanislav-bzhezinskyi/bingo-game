@@ -5,7 +5,15 @@ let numberArray = [];
 let randomNum = () => Math.floor(Math.random() * 46) + 1;
 
 root.className = 'endGame';
-root.textContent = 'Lets Begin'
+root.textContent = 'Lets Begin';
+
+function setAppHeight() {
+  const app = document.getElementById('app');
+  app.style.height = `${window.innerHeight}px`;
+}
+
+setAppHeight();
+window.addEventListener('resize', setAppHeight);
 
 button.addEventListener("click", () => {
   button.disabled = true;
@@ -64,10 +72,4 @@ function speakText(text) {
   speechSynthesis.speak(utterance);
 }
 
-function setAppHeight() {
-  const app = document.getElementById('app');
-  app.style.height = `${window.innerHeight}px`;
-}
 
-setAppHeight();
-window.addEventListener('resize', setAppHeight);
